@@ -43,7 +43,7 @@ export default {
       v-if="visible"
       class="card-face is-front"
     >
-      {{ value }} - {{ position }}
+      {{ value }} - {{ position }} - {{ matched }}
     </div>
     <div
       v-else
