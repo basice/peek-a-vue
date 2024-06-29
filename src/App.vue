@@ -1,6 +1,21 @@
 <script>
+import Card from './components/Card.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Card
+  },
+  setup() {
+    const cardList = []
+
+    for (let i = 0; i < 16; i++) {
+      cardList.push(i)
+    }
+
+    return {
+      cardList
+    }
+  }
 }
 </script>
 
@@ -8,22 +23,12 @@ export default {
   <h1>Peek-a-Vue</h1>
 
   <section class="game-board">
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <Card
+      v-for="(card, index) in cardList"
+      :key="`card-${index}`"
+      :value="card"
+    >
+    </Card>
   </section>
 
   <section></section>
