@@ -1,42 +1,35 @@
-# Peek-a-Vue (v0.2.0-alpha)
+# peek-a-vue
 
-The source code for the card-flipping Halloween themed game built with [Vue.js 3](https://v3.vuejs.org) and [Netlify](https://www.netlify.com/?utm_source=github&utm_medium=peekavue-bh&utm_campaign=devex)!
+This template should help get you started developing with Vue 3 in Vite.
 
-## ⚠️ Important Note
+## Recommended IDE Setup
 
-The codebase is a fun exploration of Vue.js 3's Composition API and is not representative of best practices or patterns. It is still a work in progress and additional changes will be coming.
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## 📌 Milestones
+## Customize configuration
 
-- [Start](https://github.com/basice/peek-a-vue/tree/000-start): Where we started
-- [MVP](https://github.com/basice/peek-a-vue/tree/001-mvp): Where the [Halloween YouTube video (2020-10-28)](https://www.youtube.com/watch?v=WQa9-4K3me4) ends
-- [Current](https://github.com/basice/peek-a-vue/tree/main): Where the codebase currently is
+See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Setup
+## Project Setup
 
-```
-yarn install
+```sh
+yarn
 ```
 
-### Compiles and hot-reloads for development
+### Compile and Hot-Reload for Development
 
-```
-yarn serve
+```sh
+yarn dev
 ```
 
-### Compiles and minifies for production
+### Compile and Minify for Production
 
-```
+```sh
 yarn build
 ```
 
-### Lints and fixes files
+### Lint with [ESLint](https://eslint.org/)
 
-```
+```sh
 yarn lint
 ```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-basice
