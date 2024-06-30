@@ -1,4 +1,5 @@
 <script>
+import { _ } from 'lodash'
 import { computed, ref, watch } from 'vue'
 import Card from './components/Card.vue'
 
@@ -11,6 +12,7 @@ export default {
   setup() {
     const cardList = ref([])
     const userSelection = ref([])
+
     const status = computed(() => {
       if (remainingPairs.value === 0) {
         return 'Player wins!'
@@ -25,10 +27,14 @@ export default {
       return remainingCards / 2
     })
 
+    const shuffleCards = () => {
+      cardList.value = _.shuffle(cardList.value)
+    }
+
     for (let i = 0; i < 16; i++) {
       cardList.value.push({
-        value: 2,
-        visible: false,
+        value: i,
+        visible: true,
         position: i,
         matched: false
       })
@@ -68,7 +74,8 @@ export default {
       cardList,
       flipCard,
       userSelection,
-      status
+      status,
+      shuffleCards
     }
   }
 }
@@ -89,6 +96,7 @@ export default {
   </section>
 
   <h2>{{ status }}</h2>
+  <button @click="shuffleCards">Shuffle Cards</button>
 </template>
 
 <style>
